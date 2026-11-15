@@ -52,8 +52,8 @@ body.motion-ready .motion-reveal.motion-visible { opacity: 1; transform: none; f
 .social-links a:hover { padding-left: 8px; }
 .scroll-cue span { animation: ryu-scroll-pulse 1.8s ease-in-out infinite; }
 @keyframes ryu-scroll-pulse { 0%,100% { transform: scaleX(.65); opacity: .5; transform-origin: left; } 50% { transform: scaleX(1); opacity: 1; transform-origin: left; } }
-#ryu-cursor-ring, #ryu-cursor-dot { position: fixed; left: 0; top: 0; z-index: 1200; pointer-events: none; opacity: 0; transform: translate(-50%,-50%); }
-#ryu-cursor-ring { width: 27px; height: 27px; border: 1px solid rgba(245,245,245,.72); border-radius: 50%; transition: width .22s ease, height .22s ease, border-color .22s ease, background .22s ease, opacity .2s ease, left .1s ease-out, top .1s ease-out; }
+#ryu-cursor-ring, #ryu-cursor-dot { position: fixed; left: 0; top: 0; z-index: 1200; pointer-events: none; opacity: 0; transform: translate3d(-100px,-100px,0) translate(-50%,-50%); will-change: transform; }
+#ryu-cursor-ring { width: 27px; height: 27px; border: 1px solid rgba(245,245,245,.72); border-radius: 50%; transition: width .22s ease, height .22s ease, border-color .22s ease, background .22s ease, opacity .2s ease; }
 #ryu-cursor-dot { width: 4px; height: 4px; border-radius: 50%; background: #f5f5f5; transition: opacity .2s ease; }
 body.ryu-cursor-active #ryu-cursor-ring, body.ryu-cursor-active #ryu-cursor-dot { opacity: 1; }
 body.ryu-cursor-hover #ryu-cursor-ring { width: 43px; height: 43px; border-color: rgba(245,245,245,.95); background: rgba(245,245,245,.035); }
@@ -74,7 +74,7 @@ body.ryu-cursor-hover #ryu-cursor-ring { width: 43px; height: 43px; border-color
 
 </style></head><body><header class="site-header"><a class="brand" href="https://itz-ryuu.github.io/abt-me/"><span class="brand-mark">R</span><span>RYU<span class="brand-dot">.</span></span></a><nav class="nav"><a href="https://itz-ryuu.github.io/abt-me/">HOME</a><a href="https://itz-ryuu.github.io/ryu-about/">ABOUT</a><a href="https://itz-ryuu.github.io/ryu-projects/" class="active">PROJECTS</a><a href="https://itz-ryuu.github.io/ryu-garage/">GARAGE</a><a href="https://itz-ryuu.github.io/ryu-gaming/">GAMING</a></nav></header><main>
 <section class="section wrap" style="padding-top:92px"><div class="section-index"><span>01</span><span>PROJECTS / BUILDS</span></div><div class="section-grid"><div><p class="eyebrow">IDEAS INTO SOMETHING REAL</p><h2 style="margin-top:24px">Build.<br><em>Break. Improve.</em></h2></div><div class="section-copy"><p class="large">I enjoy making things, figuring out how they work and improving them one step at a time.</p><p>This is where I'll collect websites, code experiments, small tools and other projects. Some are finished, some are still works in progress — that's part of it.</p></div></div></section>
-<section class="section wrap"><div class="section-index"><span>02</span><span>SELECTED WORK / INTERESTS</span></div><div class="copy-grid"><article class="info-card"><p class="eyebrow">01 / WEB</p><h3>Personal website network</h3><p>A connected set of independent pages for my profile, projects, garage and gaming interests.</p></article><article class="info-card"><p class="eyebrow">02 / AUTOMATION</p><h3>Discord bot experiments</h3><p>Exploring Python bots, commands, embeds and automated community updates.</p></article><article class="info-card"><p class="eyebrow">03 / FRONT-END</p><h3>Web design</h3><p>HTML, CSS and JavaScript experiments focused on clean layouts and personal visual identity.</p></article><article class="info-card"><p class="eyebrow">04 / LEARNING</p><h3>More in progress</h3><p>This page will grow as I publish new work. More details will be added here as projects take shape.</p></article></div><div class="feature-panel"><p class="eyebrow">CURRENT FOCUS</p><h3>More in progress</h3><p>New projects and experiments will appear here as they take shape.</p></div></section></main><section class="contact-strip"><div class="wrap contact-inner"><div><p class="eyebrow">ELSEWHERE ON THE INTERNET</p><h2>Stay in touch.</h2></div><div class="social-links"><a href="https://www.instagram.com/m.ruzickaa/" target="_blank" rel="noreferrer"><span>INSTAGRAM</span><span>@m.ruzickaa ↗</span></a><button type="button" class="discord-copy" data-copy="itz.ryu."><span>DISCORD</span><span>itz.ryu.　⧉</span></button></div></div></section><footer class="site-footer wrap"><a class="brand" href="https://itz-ryuu.github.io/abt-me/"><span class="brand-mark">R</span><span>RYU<span class="brand-dot">.</span></span></a><span>BUILT WITH INTENTION</span><span>© <span class="year"></span> RYU</span></footer><script>(function(){document.querySelectorAll(".year").forEach(function(e){e.textContent=new Date().getFullYear()});document.querySelectorAll(".discord-copy").forEach(function(b){b.addEventListener("click",async function(){var v=b.getAttribute("data-copy"),t=b.querySelector("span:last-child");try{await navigator.clipboard.writeText(v);t.textContent="COPIED!"}catch(e){var a=document.createElement("textarea");a.value=v;document.body.appendChild(a);a.select();var ok=document.execCommand("copy");a.remove();t.textContent=ok?"COPIED!":v}setTimeout(function(){t.textContent="itz.ryu.　⧉"},1600)})});if("IntersectionObserver"in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");o.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll(".reveal").forEach(function(e){o.observe(e)})}})();</script><script>
+<section class="section wrap"><div class="section-index"><span>02</span><span>SELECTED WORK / INTERESTS</span></div><div class="copy-grid"><article class="info-card"><p class="eyebrow">01 / WEB</p><h3>Personal website network</h3><p>A connected set of independent pages for my profile, projects, garage and gaming interests.</p></article><article class="info-card"><p class="eyebrow">02 / AUTOMOTIVE</p><h3>Cars, bikes & tuning</h3><p>I'm into tuning, upgrading and styling cars and bikes — making each build look and feel unique.</p></article><article class="info-card"><p class="eyebrow">03 / FRONT-END</p><h3>Web design</h3><p>HTML, CSS and JavaScript experiments focused on clean layouts and personal visual identity.</p></article><article class="info-card"><p class="eyebrow">04 / CURRENT SEARCH</p><h3>Looking for a project car</h3><p>Currently searching for a good base car to tune, upgrade and make my own.</p></article></div><div class="feature-panel"><p class="eyebrow">CURRENT SEARCH / PROJECT CAR</p><h3>Hyundai Coupé 2.0 · 2005</h3><p>I'm currently looking for the right car to turn into a project — tuning it, upgrading it and giving it a distinctive look. The 2.0 petrol Hyundai Coupé from 2005 is one I'm especially interested in. Not bought yet; it's a model I'm considering.</p></div></section></main><section class="contact-strip"><div class="wrap contact-inner"><div><p class="eyebrow">ELSEWHERE ON THE INTERNET</p><h2>Stay in touch.</h2></div><div class="social-links"><a href="https://www.instagram.com/m.ruzickaa/" target="_blank" rel="noreferrer"><span>INSTAGRAM</span><span>@m.ruzickaa ↗</span></a><button type="button" class="discord-copy" data-copy="itz.ryu."><span>DISCORD</span><span>itz.ryu.　⧉</span></button></div></div></section><footer class="site-footer wrap"><a class="brand" href="https://itz-ryuu.github.io/abt-me/"><span class="brand-mark">R</span><span>RYU<span class="brand-dot">.</span></span></a><span>BUILT WITH INTENTION</span><span>© <span class="year"></span> RYU</span></footer><script>(function(){document.querySelectorAll(".year").forEach(function(e){e.textContent=new Date().getFullYear()});document.querySelectorAll(".discord-copy").forEach(function(b){b.addEventListener("click",async function(){var v=b.getAttribute("data-copy"),t=b.querySelector("span:last-child");try{await navigator.clipboard.writeText(v);t.textContent="COPIED!"}catch(e){var a=document.createElement("textarea");a.value=v;document.body.appendChild(a);a.select();var ok=document.execCommand("copy");a.remove();t.textContent=ok?"COPIED!":v}setTimeout(function(){t.textContent="itz.ryu.　⧉"},1600)})});if("IntersectionObserver"in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");o.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll(".reveal").forEach(function(e){o.observe(e)})}})();</script><script>
 (function () {
   var body = document.body;
   var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -135,15 +135,41 @@ body.ryu-cursor-hover #ryu-cursor-ring { width: 43px; height: 43px; border-color
     dot.setAttribute("aria-hidden", "true");
     body.appendChild(ring);
     body.appendChild(dot);
+    var pointerX = 0, pointerY = 0, ringX = 0, ringY = 0;
+    var cursorFrame = 0, hasPointer = false;
+    function renderCursor() {
+      var dx = pointerX - ringX, dy = pointerY - ringY;
+      ringX += dx * 0.24;
+      ringY += dy * 0.24;
+      ring.style.transform = "translate3d(" + ringX.toFixed(2) + "px," + ringY.toFixed(2) + "px,0) translate(-50%,-50%)";
+      if (Math.abs(dx) > 0.12 || Math.abs(dy) > 0.12) {
+        cursorFrame = window.requestAnimationFrame(renderCursor);
+      } else {
+        ringX = pointerX;
+        ringY = pointerY;
+        ring.style.transform = "translate3d(" + ringX.toFixed(2) + "px," + ringY.toFixed(2) + "px,0) translate(-50%,-50%)";
+        cursorFrame = 0;
+      }
+    }
     body.addEventListener("pointermove", function (event) {
-      ring.style.left = event.clientX + "px";
-      ring.style.top = event.clientY + "px";
-      dot.style.left = event.clientX + "px";
-      dot.style.top = event.clientY + "px";
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      if (!hasPointer) {
+        ringX = pointerX;
+        ringY = pointerY;
+        hasPointer = true;
+      }
+      dot.style.transform = "translate3d(" + pointerX + "px," + pointerY + "px,0) translate(-50%,-50%)";
       body.classList.add("ryu-cursor-active");
+      if (!cursorFrame) cursorFrame = window.requestAnimationFrame(renderCursor);
     }, { passive: true });
     body.addEventListener("pointerleave", function () {
       body.classList.remove("ryu-cursor-active", "ryu-cursor-hover");
+      hasPointer = false;
+      if (cursorFrame) {
+        window.cancelAnimationFrame(cursorFrame);
+        cursorFrame = 0;
+      }
     });
     body.addEventListener("pointerover", function (event) {
       if (event.target.closest("a, button, .tile, .info-card")) body.classList.add("ryu-cursor-hover");
